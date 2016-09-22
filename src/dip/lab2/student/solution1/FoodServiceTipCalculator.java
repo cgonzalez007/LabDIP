@@ -13,8 +13,6 @@ package dip.lab2.student.solution1;
 public class FoodServiceTipCalculator implements TipCalculator {
 
     private double minBill;
-    private final String BILL_ENTRY_ERR
-            = "Error: bill must be greater than or equal to " + minBill;
     private double goodRate;
     private double fairRate;
     private double poorRate;
@@ -62,8 +60,9 @@ public class FoodServiceTipCalculator implements TipCalculator {
 
     public final void setBillAmount(double billAmt) {
         //needs validation
-        if (billAmt < minBill) {
-            throw new IllegalArgumentException(BILL_ENTRY_ERR);
+        if (billAmt <= minBill) {
+            throw new IllegalArgumentException("Error: bill must be greater "
+                    + "than or equal to " + minBill);
         }
         this.billAmount = billAmt;
     }
@@ -83,7 +82,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
 
     public final void setGoodRate(double goodRate) {
         //needs validation
-        if (goodRate < 0) {
+        if (goodRate <= 0) {
             throw new IllegalArgumentException(
                     "rate must be greater than or equal to zero");
         }
@@ -96,7 +95,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
 
     public final void setFairRate(double fairRate) {
         //needs validation
-        if (goodRate < 0) {
+        if (goodRate <= 0) {
             throw new IllegalArgumentException(
                     "rate must be greater than or equal to zero");
         }
@@ -109,7 +108,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
 
     public final void setPoorRate(double poorRate) {
         //needs validation
-        if (goodRate < 0) {
+        if (goodRate <= 0) {
             throw new IllegalArgumentException(
                     "rate must be greater than or equal to zero");
         }
@@ -122,7 +121,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
 
     public final void setMinBill(double minBill) {
         //needs validation
-        if (goodRate < 0) {
+        if (goodRate <= 0) {
             throw new IllegalArgumentException(
                     "mininum bill be greater than or equal to zero");
         }

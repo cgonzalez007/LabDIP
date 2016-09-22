@@ -77,7 +77,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public final void setBagCount(int bagCount) {
         //needs validation
-        if (bagCount < 0) {
+        if (bagCount <= 0) {
             throw new IllegalArgumentException(
                     "bag count must be greater than or equal to zero");
         }
@@ -90,7 +90,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public final void setBaseTipPerBag(double baseTipPerBag) {
         //needs validation
-        if (baseTipPerBag < 0) {
+        if (baseTipPerBag <= 0) {
             throw new IllegalArgumentException(
                     "error: base tip must be greater than or equal to zero");
         }
@@ -103,7 +103,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public final void setMinBill(double minBill) {
         //needs validation
-        if (minBill < 0) {
+        if (minBill <= 0) {
             throw new IllegalArgumentException(
                     "error: miminum bill must be greater than or equal to zero");
         }
@@ -117,7 +117,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public final void setMaxBill(double maxBill) {
         //needs validation
-        if (minBill < 0) {
+        if (minBill <= 0) {
             throw new IllegalArgumentException(
                     "error: maximum bill must be greater than or equal to zero");
         }
@@ -130,7 +130,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public final void setGoodRate(double goodRate) {
         //needs validation
-        if (minBill < 0) {
+        if (minBill <= 0) {
             throw new IllegalArgumentException(
                     "error: rate must be greater than or equal to zero");
         }
@@ -143,7 +143,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public final void setFairRate(double fairRate) {
         //needs validation
-        if (minBill < 0) {
+        if (minBill <= 0) {
             throw new IllegalArgumentException(
                     "error: rate must be greater than or equal to zero");
         }
@@ -156,7 +156,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public final void setPoorRate(double poorRate) {
         //needs validation
-        if (minBill < 0) {
+        if (minBill <= 0) {
             throw new IllegalArgumentException(
                     "error: rate must be greater than or equal to zero");
         }
