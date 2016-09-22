@@ -141,7 +141,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         return fairRate;
     }
 
-    public void setFairRate(double fairRate) {
+    public final void setFairRate(double fairRate) {
         //needs validation
         if (minBill < 0) {
             throw new IllegalArgumentException(

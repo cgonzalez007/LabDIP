@@ -37,7 +37,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
         return tip;
     }
 
-    private final void setTip(double tip) {
+    private void setTip(double tip) {
         this.tip = tip;
     }
 
