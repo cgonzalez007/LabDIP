@@ -17,7 +17,6 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     private double poorRate;
     private double baseTipPerBag;
     private int bagCount;
-    private double tip;
     private ServiceQuality serviceQuality;
 
     public BaggageServiceTipCalculator(ServiceQuality serviceQuality,
@@ -35,16 +34,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     }
 
     @Override
-    public final double getTip() {
-        return tip;
-    }
-
-    private void setTip(double tip) {
-        this.tip = tip;
-    }
-
-    @Override
-    public final void calculateTip() {
+    public final double calculateTip() {
         double calculation = 0.00; // always initialize local variables
 
         switch (serviceQuality) {
@@ -59,7 +49,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
                 break;
         }
 
-        setTip(calculation);
+        return calculation;
     }
 
     public final void setServiceRating(ServiceQuality serviceQuality) {
@@ -111,7 +101,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     }
 
     public final double getMaxBill() {
-        
+
         return maxBill;
     }
 

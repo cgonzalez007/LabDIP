@@ -32,17 +32,17 @@ public class Startup {
         TipCalculator tipCalculator
                 = new BaggageServiceTipCalculator(ServiceQuality.POOR, 12);
         TipManager tipManager = new TipManager(tipCalculator);
-        
+
         System.out.println("Tip: " + new DecimalFormat("$0.00").
                 format(tipManager.getTip()));
-/**
- * Can easily switch from a BaggageServiceTipCalculator to a 
- * FoodServiceTipCalculator and vice-versa. One thing to note between the two
- * is that for the FoodServiceTipCalculator object I must pass a double
- * BillAmount (total of Bill before adding tip), while for the
- * BaggageServiceTipCalculator object I must pass an int bagCount (total bags
- * carried by Worker). 
- * 
- */
+        /**
+         * Can easily switch from a BaggageServiceTipCalculator to a
+         * FoodServiceTipCalculator and vice-versa. One thing to note between
+         * the two is that for the FoodServiceTipCalculator object I must pass a
+         * double BillAmount (total of Bill before adding tip), while for the
+         * BaggageServiceTipCalculator object I must pass an int bagCount (total
+         * bags carried by Worker).
+         *
+         */
     }
 }
