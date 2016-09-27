@@ -13,15 +13,15 @@ import java.util.logging.Logger;
  */
 public class FileMessageOutput implements MessageOutput {
 
-    private File file;
+    private String fileName;
 
-    public FileMessageOutput(File file) {
-        this.file = file;
+    public FileMessageOutput(String fileName) {
+        this.fileName = fileName;
     }
 
     @Override
     public void outputMessage(String message) {
-        File file = this.file;
+        File file = new File(fileName);
         try {
             PrintWriter fileOutput = new PrintWriter(file);
             fileOutput.print(message);

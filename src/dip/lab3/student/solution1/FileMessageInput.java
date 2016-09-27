@@ -3,7 +3,6 @@ package dip.lab3.student.solution1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,13 +16,13 @@ public class FileMessageInput implements MessageInput {
     private String fileName;
 
     public FileMessageInput(String fileName) {
-
+        this.fileName=fileName;
     }
 
     @Override
     public String getMessage() {
         File file = new File(fileName);
-        String message = "";
+        String message = null;
         try {
             Scanner messageReader = new Scanner(file);
             message = messageReader.next();
