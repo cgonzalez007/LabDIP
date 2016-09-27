@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class KeyboardMessageInput implements MessageInput {
 
     @Override
-    public String getMessage() {
+    public final String getMessage() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter message: ");
         return input.nextLine();

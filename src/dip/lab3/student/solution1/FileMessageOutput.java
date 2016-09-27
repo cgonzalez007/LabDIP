@@ -20,7 +20,7 @@ public class FileMessageOutput implements MessageOutput {
     }
 
     @Override
-    public void outputMessage(String message) {
+    public final void outputMessage(String message) {
         File file = new File(fileName);
         try {
             PrintWriter fileOutput = new PrintWriter(file);

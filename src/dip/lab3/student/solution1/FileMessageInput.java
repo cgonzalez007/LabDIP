@@ -20,7 +20,7 @@ public class FileMessageInput implements MessageInput {
     }
 
     @Override
-    public String getMessage() {
+    public final String getMessage() {
         File file = new File(fileName);
         String message = null;
         try {
