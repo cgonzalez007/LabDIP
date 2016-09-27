@@ -12,15 +12,16 @@ import java.util.logging.Logger;
  * @author cgonz
  */
 public class FileMessageOutput implements MessageOutput {
+
     private File file;
 
     public FileMessageOutput(File file) {
         this.file = file;
     }
-    
+
     @Override
     public void outputMessage(String message) {
-       File file = this.file;
+        File file = this.file;
         try {
             PrintWriter fileOutput = new PrintWriter(file);
             fileOutput.print(message);
@@ -30,5 +31,5 @@ public class FileMessageOutput implements MessageOutput {
                     null, ex);
         }
     }
-    
+
 }

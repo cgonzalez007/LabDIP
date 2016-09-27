@@ -13,7 +13,7 @@ public class KeyboardMessageInput implements MessageInput {
     public String getMessage() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter message: ");
-        return input.next();
+        return input.nextLine();
 
     }
 
